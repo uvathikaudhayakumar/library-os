@@ -1,0 +1,8 @@
+<header class="navbar navbar-expand-md navbar-light d-print-none app-topbar">
+<div class="container-fluid">
+<a class="navbar-brand fw-bold" href="<%= currentUser?.role === 'admin' ? '/admin' : '/student' %>"><span class="brand-mark">L</span> LibraryOS</a>
+<div class="navbar-nav flex-row order-md-last align-items-center gap-3">
+<span class="text-secondary small d-none d-sm-inline"><%= currentUser?.name %></span>
+<form method="post" action="/logout"><button class="btn btn-outline-secondary btn-sm">Sign out</button></form>
+</div>
+</div></header>

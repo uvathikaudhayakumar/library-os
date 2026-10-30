@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+<div class="login-wrap">
+  <div class="login-card">
+    <div class="text-center mb-4"><div class="brand-mark brand-large mx-auto">L</div><h1 class="h2 mt-3">LibraryOS</h1><p class="text-secondary">Library Book Reservation & Fine Management</p></div>
+    <% if (error) { %><div class="alert alert-danger"><%= error %></div><% } %>
+    <form method="post" action="/login">
+      <label class="form-label">Login portal</label>
+      <select class="form-select mb-3" name="portal" required><option value="student">Student</option><option value="admin">Administrator</option></select>
+      <label class="form-label">Email address</label><input class="form-control mb-3" type="email" name="email" required placeholder="name@example.com">
+      <label class="form-label">Password</label><input class="form-control mb-4" type="password" name="password" required>
+      <button class="btn btn-primary w-100">Sign in securely</button>
+    </form>
+    <p class="small text-secondary mt-3 mb-0">Access is controlled by your assigned account role.</p>
+  </div>
+</div>
+<%- include('partials/footer') %>
